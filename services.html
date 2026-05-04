@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Services — Dan McDermott DJ & Entertainment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .services-list {
+      padding: 0 40px 100px;
+    }
+
+    .service-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 48px;
+      align-items: center;
+      gap: 48px;
+      padding: 36px 0;
+      border-bottom: 1px solid #1e1e1e;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.2s;
+    }
+
+    .service-row:first-child { border-top: 1px solid #1e1e1e; }
+    .service-row:hover { background: #0f0f0f; }
+
+    .service-row h2 {
+      font-family: var(--display);
+      font-size: clamp(36px, 4.5vw, 68px);
+      letter-spacing: 0.01em;
+      line-height: 1;
+      color: var(--white);
+      transition: color 0.15s;
+    }
+
+    .service-row:hover h2 { color: var(--red); }
+
+    .service-row .desc {
+      font-size: 12px;
+      line-height: 1.75;
+      color: var(--gray-text);
+    }
+
+    .service-row .arrow {
+      font-family: var(--display);
+      font-size: 32px;
+      color: var(--gray-text);
+      text-align: right;
+      transition: color 0.15s, transform 0.2s;
+    }
+
+    .service-row:hover .arrow {
+      color: var(--red);
+      transform: translateX(6px);
+    }
+
+    @media (max-width: 1024px) {
+      .services-list { padding: 0 20px 64px; }
+      .service-row { grid-template-columns: 1fr 32px; gap: 16px; padding: 24px 0; }
+      .service-row .desc { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Dan McDermott<small>DJ &amp; Entertainment · Central PA</small></a>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html" data-scramble>home</a></li>
+      <li><a href="gallery.html" data-scramble>gallery</a></li>
+      <li><a href="services.html" class="active" data-scramble>services</a></li>
+      <li><a href="service-areas.html" data-scramble>areas</a></li>
+      <li><a href="contact.html" data-scramble>contact</a></li>
+      <li><a href="contact.html" class="nav-book" data-scramble>book now</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-top">
+<h1>Services</h1>
+  </div>
+
+  <div class="services-list">
+    <a class="service-row reveal" href="services/weddings.html">
+      <h2>Weddings</h2>
+      <p class="desc">Ceremony music, cocktail hour, reception, first dance — every moment timed to the room.</p>
+      <span class="arrow">→</span>
+    </a>
+    <a class="service-row reveal" data-delay="60" href="services/birthday-parties.html">
+      <h2>Birthday Parties</h2>
+      <p class="desc">From sweet sixteen to milestone birthdays — the right energy for any age.</p>
+      <span class="arrow">→</span>
+    </a>
+    <a class="service-row reveal" data-delay="120" href="services/corporate-events.html">
+      <h2>Corporate Events</h2>
+      <p class="desc">Company parties, award nights, holiday galas, team events. Professional and on-brand.</p>
+      <span class="arrow">→</span>
+    </a>
+    <a class="service-row reveal" data-delay="180" href="services/graduations.html">
+      <h2>Graduations</h2>
+      <p class="desc">High school, college, eighth grade — a proper send-off for every class.</p>
+      <span class="arrow">→</span>
+    </a>
+    <a class="service-row reveal" data-delay="240" href="services/quinceaneras.html">
+      <h2>Quinceañeras</h2>
+      <p class="desc">Bilingual MC, traditional waltz to open, full night of dancing — handled with care.</p>
+      <span class="arrow">→</span>
+    </a>
+    <a class="service-row reveal" data-delay="300" href="services/holiday-events.html">
+      <h2>More</h2>
+      <p class="desc">Don't see your event here? We handle it all — school dances, block parties, fundraisers, and more.</p>
+      <span class="arrow">→</span>
+    </a>
+    <a class="service-row reveal" data-delay="360" href="services/photo-booth.html">
+      <h2>Photo Booth</h2>
+      <p class="desc">A fun addition to any event — instant prints, custom backdrops, props included.</p>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2025 Dan McDermott DJ & Entertainment</p>
+    <p>Lock Haven · State College · Williamsport · Jersey Shore</p>
+    <a href="tel:+15704351668">(570) 435-1668</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
